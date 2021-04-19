@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "dependencies": {
     "axios": "^0.18.0",
-    "netlify-lambda": "^0.4.0",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.1",
-    "react-scripts": "1.1.4",
+    "netlify-lambda": "^2.0.3",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.3",
     "request": "^2.85.0"
   },
   "scripts": {
