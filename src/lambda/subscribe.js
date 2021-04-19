@@ -50,7 +50,7 @@ module.exports.handler = async (event, context, callback) => {
 
     if (!response.ok) {
       // NOT res.status >= 200 && res.status < 300
-      return { statusCode: data.status, body: data.detail };
+      callback(data.detail, null);
     }
 
     callback(null, {
@@ -66,9 +66,6 @@ module.exports.handler = async (event, context, callback) => {
     });
   } catch (err) {
     console.log(err); // output to netlify function log
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ msg: err.message }), // Could be a custom message or object i.e. JSON.stringify(err)
-    };
+    callback(err.message, null);
   }
 };
